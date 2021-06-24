@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react"
-import './App.css';
+
+import Navbar from "./Components/Navbar";
+
+import HomeScreen from "./Screens/HomeScreen";
 
 function App() {
   const [currentTime, setCurrentTime] = useState(0)
@@ -11,9 +14,13 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-
-    </div>
+    <>
+      <Navbar />
+      <p>{currentTime}</p>
+      <div>
+        <HomeScreen />
+      </div>
+    </>
   );
 }
 
